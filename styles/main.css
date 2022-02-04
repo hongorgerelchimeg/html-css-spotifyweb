@@ -34,7 +34,7 @@ html, body {
 }
 
 body {
-    background-color: #535353;
+    
 }
 
 /* Header */
@@ -58,7 +58,14 @@ body {
 }
 
 
+/* MAIN */
 
+.main-container {
+    overflow: auto;
+    height: 400vh;
+    background-color: #535353;
+
+}
 /* FOOTER "PLAYER" */
 
 .player {

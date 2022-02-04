@@ -43,7 +43,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: calc(100vw - 150px);
+    width: calc(100vw - 200px);
     height: 100px;
     background-color: #121212;
 }
@@ -52,10 +52,66 @@ body {
     position: fixed;
     left: 0;
     top:0;
+    padding: 1rem;
     height: calc(100% - 100px);
-    width: 150px;
-    background-color: #1db954;
+    width: 200px;
+    background-color: var(--black);
+
 }
+
+.logo {
+
+    width: 120px;
+    margin-bottom: 1rem;
+}
+
+.main-nav .nav-bar .menu ul {
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+.main-nav .nav-bar .menu ul li {
+    height: 2.5rem;
+    font-weight: 600;
+    /* display: inline; */
+    
+    vertical-align: middle;
+    margin: 0.5rem 0;
+   
+    
+}
+
+.main-nav .nav-bar .menu ul li img { 
+
+    max-height: 1.8rem ;
+    vertical-align: -10px;
+    
+}
+
+
+
+/* MENU SELECTED */
+
+.selected {
+    
+    position: relative;
+       
+}
+.main-nav .nav-bar .menu ul li .selected-text {
+    color: white;
+}
+
+.selected-bar {
+    position: absolute;
+    background-color: var(--main-green);
+    left: -1rem;
+    top: -0.3rem;
+    /* transform: translatey(-15%); */
+    height: 100%;
+    width: 3px;    
+}
+/* ------------------ */
+
 
 
 /* MAIN */

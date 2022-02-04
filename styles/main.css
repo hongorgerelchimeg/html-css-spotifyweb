@@ -8,5 +8,18 @@
     
 }
 
+
+/* Variables */
+
+:root {
+    --content-bg: #212121;
+    --main-green: #1db954;
+    --black: #121212;
+    --footer-grey: #535353;
+    --light-grey: #b3b3b3;
+
+
+  } 
+
 /* Typography */
 

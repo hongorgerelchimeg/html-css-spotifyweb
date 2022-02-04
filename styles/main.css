@@ -19,7 +19,52 @@
     --light-grey: #b3b3b3;
 
 
+
   } 
 
 /* Typography */
 
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--light-grey);
+    
+}
+
+body {
+    background-color: #535353;
+}
+
+/* Header */
+
+.pop-up {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100vw - 150px);
+    height: 100px;
+    background-color: #121212;
+}
+
+.main-nav {
+    position: fixed;
+    left: 0;
+    top:0;
+    height: calc(100% - 100px);
+    width: 150px;
+    background-color: #1db954;
+}
+
+
+
+/* FOOTER "PLAYER" */
+
+.player {
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 100vw;
+    background-color: aqua;
+}

@@ -27,14 +27,22 @@
 html, body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 16px;
-    line-height: 1;
+    font-size: 12px;
+    line-height: 2;
     color: var(--light-grey);
     
 }
 
-body {
-    
+h1 {
+
+    font-weight: 800;
+    font-size: 2.2em;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1em;
+    color: white;
 }
 
 /* Header */
@@ -45,17 +53,21 @@ body {
     right: 0;
     width: calc(100vw - 200px);
     height: 100px;
-    background-color: #121212;
+    background-color: #12121273;
+    z-index: 99;
 }
 
 .main-nav {
     position: fixed;
     left: 0;
     top:0;
-    padding: 1rem;
+    padding: 1.2rem;
     height: calc(100% - 100px);
     width: 200px;
     background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
 
 }
 
@@ -71,9 +83,10 @@ body {
 }
 
 .main-nav .nav-bar .menu ul li {
+    width: 100%;
     height: 2.5rem;
     font-weight: 600;
-    /* display: inline; */
+    
     
     vertical-align: middle;
     margin: 0.5rem 0;
@@ -81,12 +94,32 @@ body {
     
 }
 
-.main-nav .nav-bar .menu ul li img { 
+.main-nav .nav-bar .menu ul li svg {
 
+    fill: var(--light-grey);
     max-height: 1.8rem ;
-    vertical-align: -10px;
+    vertical-align: -7px;
     
 }
+
+.main-nav .nav-bar .menu ul li a { 
+
+    text-decoration: none ;
+    color: var(--light-grey);
+    display: inline;
+    
+}
+
+.main-nav .nav-bar .menu ul li a:hover { 
+
+   color: white;   
+}
+
+.main-nav .nav-bar .menu ul li a:hover svg{ 
+
+    fill: white;   
+ }
+ 
 
 
 
@@ -104,7 +137,7 @@ body {
 .selected-bar {
     position: absolute;
     background-color: var(--main-green);
-    left: -1rem;
+    left: -1.2rem;
     top: -0.3rem;
     /* transform: translatey(-15%); */
     height: 100%;
@@ -112,15 +145,122 @@ body {
 }
 /* ------------------ */
 
+/* NAV Playlist */
 
+.nav-playlist {
+    margin: 1.6rem 0;
+}
+
+.nav-playlist .crea-list-btn {
+    margin: 1rem 0;
+   
+}
+
+.nav-playlist .crea-list-btn i {
+    font-size: 2.6rem;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+     /* Main Nav Button */
+
+.crea-list-btn button {
+    border: none;
+    text-decoration: none;
+    background-color: var(--black);
+    font-size: 1rem;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+.crea-list-btn button:hover {
+   color: white;
+}
+
+.playlist {
+    max-height: 25vh;
+    overflow: auto;
+}
+
+.playlist ul {
+    list-style: none;
+    
+}
+
+.playlist ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/* NAV client */
+
+.nav-client {
+    
+}
+
+.client-holder {
+    display: flex;
+    align-items: center;
+}
+
+.client-img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 20px;
+    background-color: var(--light-grey);
+    margin-right: 0.5rem;
+}
+
+.client-img img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+   
+}
+
+/* Buttons */
+.app-install-holder {
+    border-bottom: 1px solid var(--light-grey) ;
+    margin-bottom: 1rem;
+   
+}
+
+.install-btn  {
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 1rem;
+    color: var(--light-grey);
+    cursor: pointer;
+    
+}
+
+.install-btn::before {
+    content: url(../img/download.svg);
+    display: inline-block;
+    height: 1.4rem;
+    width: 1.4rem;
+    vertical-align: middle;
+
+}
+
+.install-btn:hover  {
+    color: white;    
+}
 
 /* MAIN */
 
 .main-container {
+
     overflow: auto;
-    height: 400vh;
     background-color: #535353;
 
+}
+
+.content {
+    height: 100vh;
 }
 /* FOOTER "PLAYER" */
 
@@ -129,5 +269,5 @@ body {
     bottom: 0;
     height: 100px;
     width: 100vw;
-    background-color: aqua;
+    background-color: var(--content-bg);
 }

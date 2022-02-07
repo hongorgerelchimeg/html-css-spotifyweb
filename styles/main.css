@@ -17,6 +17,8 @@
     --black: #121212;
     --footer-grey: #535353;
     --light-grey: #b3b3b3;
+    --main-nav-width: 200px;
+    --footer-height:100px;
 
 
 
@@ -47,23 +49,50 @@ h2 {
 
 /* Header */
 
+
+/* **********Pop-up************** */
+
 .pop-up {
     position: fixed;
     top: 0;
     right: 0;
-    width: calc(100vw - 200px);
+    width: calc(100vw - var(--main-nav-width));
     height: 100px;
     background-color: #12121273;
     z-index: 99;
 }
 
+.pop-up-btn-holder {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.pop-up-btn {
+    font-size: 1rem;
+    border: 1px solid white;
+    background-color: unset;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.pop-up-btn:hover {
+    background-color: var(--main-green);
+    border: 1px solid var(--main-green);
+}
+
+
+/* ***************************** */
 .main-nav {
     position: fixed;
     left: 0;
     top:0;
     padding: 1.2rem;
-    height: calc(100% - 100px);
-    width: 200px;
+    height: calc(100% - var(--footer-height));
+    width: var(--main-nav-width);
     background-color: var(--black);
     display: flex;
     flex-direction: column;
@@ -72,9 +101,13 @@ h2 {
 }
 
 .logo {
-
-    width: 120px;
+    
+    width: 100%;
     margin-bottom: 1rem;
+}
+
+.logo img {
+    height: 2.8rem;
 }
 
 .main-nav .nav-bar .menu ul {
@@ -255,8 +288,8 @@ h2 {
 .main-container {
     position: absolute;
     right: 0;
-    width: calc(100vw - 200px);
-    height: calc(100% - 100px);
+    width: calc(100vw - var(--main-nav-width));
+    height: calc(100% - var(--footer-height));
     overflow: auto;
     background-color: #535353;
     width: ;
@@ -271,13 +304,14 @@ h2 {
 footer {
     position: fixed;
     bottom: 0;
-    height: 100px;
-    width: 100vw;
+    height: var(--footer-height);
+    width: 100%;
     background-color: var(--content-bg);
     
 }
 
 .player-container {
+    height: 100%;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -289,9 +323,6 @@ footer {
 .controller {
     
     width: 25%;
-    height: 100px;
-    
-   
 }
 
 .cover, .song-title {

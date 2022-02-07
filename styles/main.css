@@ -333,8 +333,13 @@ h3 {
     color: var(--light-grey);
 }
 
+
+.sub-nav ul li a:hover {
+
+    color: white;
+}
 .selected .bottom {
-    left: 3rem;
+    left: 4rem;
     top: 1rem;
     transform: rotate(90deg);
 }
@@ -371,6 +376,10 @@ h3 {
 
 
 .song-image {
+
+    width: 100%;
+    height: 100%;
+    
    
 }
 
@@ -379,6 +388,14 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover ;
+}
+
+.song .round {
+    border-radius: 50%;
+}
+
+.song .round img {
+    border-radius: 50%;
 }
 
 .song .song-title {
@@ -476,11 +493,23 @@ footer {
     line-height: 1.2;
 }
 
-.song-sub-title {
+.song-title a {
+    text-decoration: none;
+    color: white;
+}
+
+.song-title .song-sub-title a {
     font-weight: 400;
     color: var(--light-grey);
-
 }
+
+.song-title a:hover {
+    text-decoration: underline;
+    color: white;
+    
+}
+
+
 
 .player {
     width: 50%;
@@ -496,6 +525,15 @@ footer {
 .player-btns i {
     margin-right: 2.2rem;
     font-size: 1.5rem;
+}
+
+.play-btn {
+    display: inline;
+}
+
+.play-btn i {
+    display: inline;
+    font-size: 2.2rem;
 }
 
 .player-timer {
@@ -531,6 +569,10 @@ footer {
     margin: 0 1rem;
 }
 
+.controller i:hover,
+.player i:hover {
+    cursor: pointer;
+}
 
 @media screen and  (max-width: 639px)  {
 
@@ -580,15 +622,16 @@ footer {
 
     .song {
         width: calc((100% - 4rem) /2);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex: 0 0 auto;
     }
 
     .sub-nav ul {
         font-size: .8rem;
+        line-height: 2.6;
+    }
+
+    .selected .bottom {
+        left: 2.5rem;
+        top: 1rem;
     }
 
     .song .song-title {
@@ -606,11 +649,14 @@ footer {
 
     :root {
         --main-nav-width: 4rem;
-        --footer-height:100px;
+        --footer-height: 80px;
     
     }
     
-    
+    .pop-up-btn {
+        font-size: 0.6rem;
+    }
+
     .main-nav {
         padding: 1rem;
     
@@ -649,3 +695,38 @@ footer {
 
 }
 
+@media screen and  (min-width: 879px)   {
+
+    .songs-holder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: -1rem;
+    margin-top: 2rem;
+    text-align: center;
+    
+
+    }
+
+    .songs-holder > * {
+        margin-left: 1rem;
+        margin-bottom: 2rem;
+    }
+
+
+    .song {
+        width: calc((100% - 6rem) /6);
+        max-width: 170px;
+    
+    }
+
+    .song-tag {
+        margin-left: 5rem;
+      }
+
+    .too-much {
+
+        justify-content: space-between;
+    }
+
+}

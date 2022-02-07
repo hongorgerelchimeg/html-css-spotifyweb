@@ -279,6 +279,10 @@ footer {
 
 .player-container {
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .song,
@@ -315,7 +319,7 @@ footer {
 
 
 
-.player-container .song {
+.song {
     display: flex;
     align-items: center;
   
@@ -323,10 +327,12 @@ footer {
 }
 
 .cover {
-    height: 4.5rem;
-    width: 4.5rem;
+    height: 4rem;
+    width: 4rem;
    
 }
+
+
 
 .song .cover img {
     width: 100%;
@@ -343,4 +349,53 @@ footer {
     font-weight: 400;
     color: var(--light-grey);
 
+}
+
+.player {
+    width: 50%;
+    text-align: center;
+
+}
+
+.player-timer > :nth-child(2) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.player-btns i {
+    margin-right: 2.2rem;
+    font-size: 1.5rem;
+}
+
+.player-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-bar {
+    width: 50%;
+    height: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--footer-grey);
+
+
+
+}
+
+.bar-played {
+    width: 30%;
+    height: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--light-grey);
+}
+
+.controller {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.controller > :nth-child(2n + 2) {
+    margin: 0 1rem;
 }

@@ -113,6 +113,10 @@ h3 {
     margin-bottom: 1rem;
 }
 
+.logo-small {
+    display: none;
+}
+
 .logo img {
     height: 2.8rem;
 }
@@ -422,14 +426,14 @@ footer {
 
 .cover, .song-title {
    
-   margin-left: 1.2rem;
+   margin-left: .7rem;
    flex: 0 0 auto;
    
 
 }
 
 .song-tag {
-  margin-left: 3rem;
+  margin-left: 1.5rem;
 }
 
 .song-tag i {
@@ -524,5 +528,100 @@ footer {
 
 .controller > :nth-child(2n + 2) {
     margin: 0 1rem;
+}
+
+
+@media screen and  (max-width: 639px)  {
+
+    .song-small,
+    .controller,
+    .player {
+     
+        width: calc(100%/3);
+        font-size: .8rem;
+    }
+
+    .song-small .cover {
+
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .song-tag {
+        margin-left: .5rem;
+      }
+
+    .song-tag i {
+        margin-right: .5rem;
+        font-size: 1rem;
+        color: var(--light-grey);
+    }
+
+    .player-btns i {
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
+
+  
+    .controller > :nth-child(2n + 2) {
+        margin: 0 .6rem;
+    }
+
+    .song {
+        width: calc((100% - 4rem) /2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto;
+    }
+}
+
+@media screen and  (max-width: 552px)  {
+
+
+    :root {
+        --main-nav-width: 4rem;
+        --footer-height:100px;
+    
+    }
+    
+    
+    .main-nav {
+        padding: 1rem;
+    
+    }
+
+    .player-container {
+        min-width: 413px ;
+        overflow: auto;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-small {
+        display: block;
+    }
+
+
+    .menu-items-text {
+        display: none;
+    }
+    
+    .nav-playlist {
+        display: none;
+    }
+
+    .client-img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0;
+    }
+
+
+    
+
 }
 

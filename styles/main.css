@@ -33,6 +33,7 @@ html, body {
     line-height: 2;
     color: var(--light-grey);
     
+    
 }
 
 h1 {
@@ -47,6 +48,12 @@ h2 {
     color: white;
 }
 
+h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+}
+
 /* Header */
 
 
@@ -57,9 +64,9 @@ h2 {
     top: 0;
     right: 0;
     width: calc(100vw - var(--main-nav-width));
-    height: 100px;
-    background-color: #12121273;
+    height: var(--footer-height);
     z-index: 99;
+    background-color: #1212121c;
 }
 
 .pop-up-btn-holder {
@@ -283,22 +290,110 @@ h2 {
     color: white;    
 }
 
-/* MAIN */
+/* ***********MAIN Content************* */
 
 .main-container {
-    position: absolute;
+    position: fixed;
     right: 0;
+    bottom: 0;
     width: calc(100vw - var(--main-nav-width));
-    height: calc(100% - var(--footer-height));
-    overflow: auto;
+    height: 100%;
     background-color: #535353;
-    width: ;
+    overflow: auto;
+    padding: calc( var(--footer-height) + 1rem ) 1.5rem 3rem;
+}
+
+.content-holder {
+    
+}
+
+.sub-nav {
+    margin-bottom: 2rem;
+}
+
+.sub-nav ul {
+    list-style: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+}
+
+.sub-nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.sub-nav ul li a {
+    text-decoration: none;
+    color: var(--light-grey);
+}
+
+.selected .bottom {
+    left: 3rem;
+    top: 1rem;
+    transform: rotate(90deg);
+}
+
+/* *******Songs*********** */
+
+.songs-holder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: -1rem;
+    margin-top: 2rem;
+    text-align: center;
+    
 
 }
 
-.content {
-    height: 300vh;
+.songs-holder > * {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
 }
+
+
+
+.song {
+    width: calc((100% - 4rem) /4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+
+
+.song-image {
+   
+}
+
+.song-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+
+.song .song-title {
+    font-size:1.3rem;
+    line-height: 1.2;
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+.song .song-subtitle {
+    max-width: 90%;
+    font-weight: 600;
+    line-height: 1;
+    
+}
+
+/* *********************** */
+
+/* ************************************* */
 /* FOOTER "PLAYER" */
 
 footer {
@@ -319,7 +414,7 @@ footer {
 
 }
 
-.song,
+.song-small,
 .controller {
     
     width: 25%;
@@ -350,7 +445,7 @@ footer {
 
 
 
-.song {
+.song-small {
     display: flex;
     align-items: center;
   
@@ -365,7 +460,7 @@ footer {
 
 
 
-.song .cover img {
+.song-small .cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -430,3 +525,4 @@ footer {
 .controller > :nth-child(2n + 2) {
     margin: 0 1rem;
 }
+

@@ -72,6 +72,7 @@ h3 {
 .pop-up-btn-holder {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding: 2rem;
 }
 
@@ -89,6 +90,7 @@ h3 {
 .pop-up-btn:hover {
     background-color: var(--main-green);
     border: 1px solid var(--main-green);
+    transform: scale(1.1);
 }
 
 
@@ -536,6 +538,10 @@ footer {
     font-size: 2.2rem;
 }
 
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
 .player-timer {
     display: flex;
     justify-content: center;
@@ -574,6 +580,8 @@ footer {
     cursor: pointer;
 }
 
+
+
 @media screen and  (max-width: 639px)  {
 
     body {
@@ -586,11 +594,15 @@ footer {
         color: white;
     }
 
+    .player-container > :nth-child(even) {
+        margin: 0 1rem;
+    }
+
     .song-small,
     .controller,
     .player {
      
-        width: calc(100%/3);
+        width: calc((100% - 2rem) /3);
         font-size: .8rem;
     }
 
@@ -727,6 +739,16 @@ footer {
     .too-much {
 
         justify-content: space-between;
+    }
+
+}
+
+
+@media screen and  (min-width: 1440px)   {
+
+    .content-holder {
+        max-width: 1200px;
+        
     }
 
 }

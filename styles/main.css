@@ -694,8 +694,12 @@ footer {
     justify-content: flex-end;
 }
 
-.controller > :nth-child(2n + 2) {
-    margin: 0 1rem;
+.controller > :nth-child(2) {
+    margin: 0 .6rem;
+}
+
+.controller > :nth-child(1) > i {
+    margin: 0 .3rem;
 }
 
 .controller i:hover,
@@ -751,8 +755,12 @@ footer {
     }
 
   
-    .controller > :nth-child(2n + 2) {
+    .controller > :nth-child(2) {
         margin: 0 .6rem;
+    }
+
+    .controller > :nth-child(1) > i {
+        margin: 0 .3rem;
     }
 
     .song {
@@ -832,6 +840,20 @@ footer {
 
 }
 
+@media screen and  (max-width: 464px)   {
+
+    .controller {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        
+    }
+
+    .controller .time-bar {
+        display: none;
+    }
+
+}
+
 @media screen and  (min-width: 879px)   {
 
     .songs-holder {
@@ -883,4 +905,11 @@ footer {
         font-size: 4rem;
         }
 
+}
+
+@media screen and  (max-height: 200px)   {
+
+    .pop-up {
+        display: none;
+    }
 }

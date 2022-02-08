@@ -105,7 +105,7 @@ h3 {
     background-color: var(--black);
     display: flex;
     flex-direction: column;
-   justify-content: space-between;
+    justify-content: space-between;
 
 }
 
@@ -525,21 +525,23 @@ footer {
 }
 
 .player-btns i {
+    color: var(--light-grey);
     margin-right: 2.2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
-.play-btn {
+.player-btn i {
+     font-size: 1.8rem;
+}
+
+.player-btns > * {
     display: inline;
 }
 
-.play-btn i {
-    display: inline;
-    font-size: 2.2rem;
-}
-
-.play-btn:hover {
-    transform: scale(1.1);
+.player-btns > *:hover i {
+    transform: scale(1.4);
+    color: white;
+    
 }
 
 .player-timer {
@@ -553,17 +555,108 @@ footer {
     height: 0.5rem;
     border-radius: 1rem;
     background-color: var(--footer-grey);
-
-
-
 }
 
 .bar-played {
+    position: relative;
     width: 30%;
     height: 0.5rem;
     border-radius: 1rem;
     background-color: var(--light-grey);
 }
+
+.time-bar:hover .bar-played {
+    background-color: var(--main-green);
+}
+
+.bar-played::after {
+    display: none;
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.time-bar:hover .bar-played::after {
+    display: block;
+}
+
+/* EFFECTS & Transactions */
+
+.bar-played {
+    animation-duration: 100s;
+    animation-name: timer;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes timer {
+    0 % {
+        width: 1rem;
+      }
+    
+    100% {
+        width: 100%;
+      }
+}
+
+
+.time-left::before,
+.time-left::after {
+  content: "";
+  width: 1ch;
+  animation: countdown 100s step-end infinite;
+}
+
+.time-left::after {
+    
+  animation-duration: 10s;
+}
+
+@keyframes countdown {
+  0% {
+    content: "9";
+  }
+  10% {
+    content: "8";
+  }
+  20% {
+    content: "7";
+  }
+  30% {
+    content: "6";
+  }
+  40% {
+    content: "5";
+  }
+  50% {
+    content: "4";
+  }
+  60% {
+    content: "3";
+  }
+  70% {
+    content: "2";
+  }
+  80% {
+    content: "1";
+  }
+  90% {
+    content: "0";
+  }
+  100% {
+    content: "0";
+  }
+}
+
+/* *********************** */
+
 
 .controller {
     display: flex;
